@@ -1,0 +1,123 @@
+Java Applications
+
+Desktop Applications     -- Abstract Window Toolkit, Swing 
+Web Applications         -- Internet is required           Servlet,JSP
+Enterprise Applications  -- 
+Mobile Applications
+
+
+==================================================
+
+       C++ Program
+==================================================
+
+int global=50;
+Class student
+{
+
+};
+
+int main()
+{
+
+	student s;
+}
+
+==================================================
+
+             Java Program
+
+==================================================
+
+Class Student
+{
+
+	public static void main(String args[])
+	{
+
+		Student s=new Student();
+	}
+}
+
+=================================================
+
+
+    Setting the Java Path 
+    a) Temporary Path Setting
+       command Prompt >  Set Path = C:\Program Files\Java\jdk1.8.0_231\bin
+
+
+    b) Permanent Pathe Setting
+       Control Panel -> System -> Advanced System Setting -> Advanced Tab ->
+       -> Environment Variable (Click) -> System Variable (Path) ->
+       -> Edit Path on writing ; C:\Program Files\Java\jdk1.8.0_231\bin
+       -> Click Ok
+
+   =========================================================================
+
+    Compiling & Running of Java Program
+    
+    a) Using Command Prompt
+    b) Using IDE (Integrated Development Environment - Eclipse)
+
+    a) Using Command Prompt
+
+       Compile Java Program:
+                            javac Filename.java   
+                            javac is a java compiler (It is a command to 
+                                                      compile Java Source File)
+       Running Java Program:
+                            java Filename
+                            java is an interpreter / JVM (Java Virtual Machine)
+                            it is used to run the Java Byte code / Class file
+
+    b) Using IDE (Integrated Development Environment - Eclipse)
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
