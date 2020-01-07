@@ -8,7 +8,7 @@ Mobile Applications
 
 ==================================================
 
-       C++ Program 
+       C++ Program
 ==================================================
 
 int global=50;
@@ -73,7 +73,281 @@ Class Student
 
     b) Using IDE (Integrated Development Environment - Eclipse)
 
-       
+
+
+Data Types :
+             1)  Primitive
+             2)  Non Primitive
+
+
+             Primitive : Intergers      : byte,short,int long
+                         Floating Point : float,double
+                         Boolean        : boolean
+                         Character      : char
+
+             Non Primitive              :Arrays and String
+
+
+            Data Type can have Size in memory, Range of data type
+
+ 	    Intergers      : byte      1 byte     -128 to 127
+                             short     2 bytes    -32768 to 32767
+                             int       4 bytes
+                             long      8 bytes
+
+
+Command Line Argument : - Arguments which are passed at the time of running
+                          the program on the command prompt.
+
+
+class MyClass
+{
+	public static void main(String args[])
+	{
+		System.out.println(Integer.parseInt(args[0])+Integer.parseInt(args[1]);
+	}
+}
+
+        Compile :  javac MyClass.java
+        Run     :  java MyClass 10 20
+
+        Command line arguments are : 10, 20
+        args[0] = 10
+        args[1] = 20
+
+	Integer.parseInt(args[0]) will convert args[0] to int
+         
+        Integer :   Wrapper Class
+        parseInt :  method defined inside Integer Class, converts string to int
+
+Streams in Java 
+               sequence of bytes
+
+
+              Types of Stream : 
+              1) Standard Output Stream
+                 System.out  ---- Object
+
+              2) Standard Input Stream
+                 System.in
+                       
+              3) Standard Error Stream
+	         System.err
+
+
+         System.out
+
+                      System ---- Class
+
+
+                    class System
+		    {
+                          PrintStream out;
+                    }
+
+
+                     class PrintStream
+                     {
+                          println(){}
+                     }
+                   
+                    System.out.println("Hello")
+
+
+    Parent class of Java : Object
+
+    Package :  java.lang ------  System     ------- out (object of PrintStream)
+               java.io   ------  PrintStream------ println()
+
+
+Class ---- Combination of State and Behaviour
+           Blueprint
+           collection of similar Objects
+           Example of Encapsulation
+
+
+Encapsulation ----- Enclosure of Data Members / Data Unit
+
+
+      class classname       // Class Header----consists of class keyword and classname
+      {
+           Body of the class   // Two things : Instance variables and instance methods
+      }
+
+
+      State ( value of instance variable )
+      Behaviour  ( functionality of any object )
+
+
+     Java Project -  > Package - >  Classes
+
+
+this keyword -- Represents the current Object, It resolves the ambuiguity problem
+                where the passed parameter name to a function is same as the instance variable
+                of the class.
+
+
+
+
+
+String - Class defined in java.lang package ( Collection of charaters )
+
+     Features are : 1) String is non Primitive data type
+                    2) String is a final Class or It is Immutable (Non Changeable)
+                    3) Can not be inherited
+                    
+     Categorisation of String : 1) Immutable String   2) Mutable 
+
+     Type of Strings Class :    1) String             2) StringBuffer         3) StringBuilder
+
+    Example class of Immutable string :   String Class
+    Example of Mutable String :           StringBuffer , StringBuilder
+
+
+    String class will have some methods.
+
+    Ways of creating String Object : two ways
+                                     1) Using String Literal 
+
+                                     2) Using New Keyword
+
+
+    1) Using String Literal 
+                            Ex:   String var = "Hello";    // Object of String Class / String literal ( Object is var )
+
+    2) Using New Keyword 
+                            Ex:   String var = new String("Hello");    // Object of string class that is var
+
+
+    Difference between String literal and New Keyword :-
+
+    String Literal  ----  Memory saving concept
+    
+    New ---------------- Not a memory Saving concept
+
+
+extends Keyword : used to inherit one class to another
+
+
+Super Keyword : used to call the base class Constructor, Base class Method and Base class member variable
+                in the child class super keyword is used.
+                super keyword is used in case of inheritance.
+
+Uses of super keyword 
+
+Constructor calling :   super();   // calls default constructor of base class                     
+                        super(10); // calls the parameterised constructor of base class.
+
+
+Method calling : super.show();   // calls the show() method of the super class from derived class
+                 super.show(10); // calls the parameterised method of super class.
+
+
+member variable calling : super.pi;  // calls the pi as a member variable of the super class.
+
+
+
+Composition
+            Student - rollno,name,adrress
+            address - laneno,city,state,country
+
+
+
+            address is a composite class
+
+
+package MyProgrammes;
+
+import java.util.Scanner;
+
+import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+
+class EmpDetail
+{
+	private String name;
+	private int age;
+	private int salary;
+	Scanner s;
+	
+	
+	public String getName() {
+		return name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public Scanner getS() {
+		return s;
+	}
+
+	public void setData()
+	{
+		s=new Scanner(System .in);
+		System.out.println("Enter Name :");
+		name =s.nextLine();
+		
+		System.out.println("Enter Age :");
+		age=s.nextInt();
+		
+		System.out.println("Enter Salary :");
+		salary =s.nextInt();
+		
+		s.nextLine();
+	}
+	
+	public EmpDetail getMax(EmpDetail e1,EmpDetail e2)
+	{
+		if(e1.salary >this.salary && e1.salary >e2.salary )
+			return e1;
+		else if(e2.salary >this.salary && e2.salary >e1.salary)
+			return e2;
+		else
+			return this;
+	}
+}
+
+public class EmpMaxSalary {
+
+	public static void main(String[] args) {
+		EmpDetail e[]=new EmpDetail[3];
+		
+		for(int i=0;i<e.length ;i++)
+		{
+			e[i]=new EmpDetail();
+			e[i].setData();
+		}
+		
+		EmpDetail em=e[0].getMax(e[1],e[2]);
+		
+		System.out.println("Name :"+em.getName()+" Age : "+em.getAge()+" Salary :"+em.getSalary());
+
+	}
+
+}
+
+
+
+
+                       
+
+
+
+
+     
+
+
+
+
+
+
+
+
 
 
 
