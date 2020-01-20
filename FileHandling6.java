@@ -12,7 +12,11 @@ public class FileHandling6 {
 		
 		int c=fis.read();
 		
+		while(c!=-1)
+		{
 		System.out.println("File contents are : "+(char)c);
+			c=fis.read();
+		}
 		fis.close();
 	}
 

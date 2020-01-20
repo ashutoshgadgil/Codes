@@ -11,6 +11,7 @@ public class FileHandling4 {
 		FileOutputStream fos=new FileOutputStream(new File("E:\\f3.txt"));
 		
 		fos.write(65);
+		fos.write('B');
 		System.out.println("File Saved successfully");
 		fos.close();
 	}
